@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="uk" data-type="service">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Коледж ІТ Політехніки</title>
+<meta name="description" content="Фаховий коледж інформаційних технологій Національного університету «Львівська політехніка». Комп'ютерні науки, комп'ютерна інженерія, телекомунікації — вступ після 9 або 11 класу.">
+<meta name="page-type" content="service">
+<meta name="site-kind" content="other">
+<meta name="theme-color" content="#0b0d0c">
+<meta property="og:title" content="Фаховий коледж інформаційних технологій — Львівська політехніка">
+<meta property="og:description" content="Програмування, комп'ютерна інженерія і телеком після 9 або 11 класу.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c6f432'/%3E%3Ctext x='16' y='22' font-family='monospace' font-weight='700' font-size='15' text-anchor='middle' fill='%230b0d0c'%3E%7B%7D%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0d0c; --bg-2:#121513; --surface:#171b18; --line:#262c28;
+  --ink:#eef2ec; --muted:#9aa59d; --accent:#c6f432; --accent-ink:#0b0d0c;
+  --cyan:#3ee6c4; --orange:#ff8a3d;
+  --r:18px; --wrap:1240px; --gut:clamp(16px,4vw,40px);
+  --f-display:"Unbounded",system-ui,sans-serif;
+  --f-body:"Manrope",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:fixed;left:16px;top:-60px;z-index:100;background:var(--accent);color:var(--accent-ink);padding:10px 16px;border-radius:10px;font-weight:700}
+.skip:focus{top:12px}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.mono{font-family:var(--f-mono)}
+.eyebrow{font-family:var(--f-mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;line-height:1.05;letter-spacing:-.02em}
+h2{font-size:clamp(34px,5vw,64px);margin:18px 0 20px}
+h2 em{font-style:normal;color:var(--muted)}
+.lead{color:var(--muted);font-size:clamp(17px,1.4vw,20px);max-width:620px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:16px;transition:transform .2s ease,background .2s,box-shadow .2s;will-change:transform}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.97)}
+.btn-primary{background:var(--accent);color:var(--accent-ink);box-shadow:0 0 0 0 rgba(198,244,50,.5)}
+.btn-primary:hover{box-shadow:0 10px 40px -8px rgba(198,244,50,.6)}
+.btn-ghost{border:1px solid var(--line);background:rgba(255,255,255,.02)}
+.btn-ghost:hover{border-color:var(--muted);background:rgba(255,255,255,.05)}
+.btn .arr{transition:transform .2s}
+.btn:hover .arr{transform:translateX(4px)}
+.link{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .3s}
+.link:hover{background-size:100% 1px}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(11,13,12,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:700;line-height:1.1;font-size:14px}
+.logo-mark{width:40px;height:40px;border-radius:11px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-family:var(--f-mono);font-weight:700;font-size:17px;flex:none}
+.logo small{display:block;color:var(--muted);font-weight:500;font-size:12px}
+.nav-links{display:flex;gap:30px;font-weight:600;font-size:15px}
+.nav-links a{color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{min-height:44px;padding:0 20px;font-size:15px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);place-items:center}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);position:relative;transition:.3s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);transition:.3s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
+.mobile-menu{position:fixed;inset:72px 0 0;background:var(--bg);z-index:49;padding:32px var(--gut);display:none;flex-direction:column;gap:6px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:var(--f-display);font-size:30px;padding:10px 0;border-bottom:1px solid var(--line)}
+.mobile-menu .btn{margin-top:24px;font-family:var(--f-body);font-size:16px;border:0}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:110px 0 60px;overflow:hidden;isolation:isolate}
+#net{position:absolute;inset:0;width:100%;height:100%;z-index:-2;opacity:.55}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(600px 420px at 78% 30%,rgba(198,244,50,.16),transparent 70%),
+             radial-gradient(520px 420px at 10% 90%,rgba(62,230,196,.12),transparent 70%),
+             linear-gradient(to bottom,transparent 70%,var(--bg))}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:56px;align-items:center}
+.hero h1{font-size:clamp(31px,4.4vw,64px);font-weight:800;margin:22px 0 24px}
+.hero h1 .hl{color:var(--accent)}
+.nw{white-space:nowrap}
+.hero h1 .cursor{display:inline-block;width:.08em;height:.85em;background:var(--accent);margin-left:.06em;vertical-align:-.05em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero .lead{margin-bottom:34px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.chip{font-family:var(--f-mono);font-size:13px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:rgba(255,255,255,.02)}
+.chip b{color:var(--ink);font-weight:600}
+
+.term{background:rgba(18,21,19,.86);border:1px solid var(--line);border-radius:20px;box-shadow:0 40px 80px -30px rgba(0,0,0,.8),0 0 0 1px rgba(198,244,50,.04);overflow:hidden;backdrop-filter:blur(8px)}
+.term-bar{display:flex;align-items:center;gap:8px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.term-bar i{width:12px;height:12px;border-radius:50%;background:#3a403c}
+.term-bar i:nth-child(1){background:#ff5f57}.term-bar i:nth-child(2){background:#febc2e}.term-bar i:nth-child(3){background:#28c840}
+.term-bar span{margin-left:10px;font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.term-body{font-family:var(--f-mono);font-size:14px;line-height:1.75;padding:22px 22px 26px;min-height:330px;white-space:pre-wrap}
+.t-p{color:var(--accent)} .t-c{color:var(--muted)} .t-k{color:var(--cyan)} .t-s{color:var(--orange)} .t-ok{color:#28c840}
+.term-cursor{display:inline-block;width:8px;height:16px;background:var(--accent);vertical-align:-3px;animation:blink 1s steps(1) infinite}
+
+/* entrance */
+[data-enter]>*{opacity:0;transform:translateY(18px);animation:enter .8s cubic-bezier(.2,.7,.2,1) forwards}
+[data-enter]>*:nth-child(2){animation-delay:.12s}
+[data-enter]>*:nth-child(3){animation-delay:.24s}
+[data-enter]>*:nth-child(4){animation-delay:.36s}
+[data-enter]>*:nth-child(5){animation-delay:.48s}
+@keyframes enter{to{opacity:1;transform:none}}
+
+/* marquee */
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding:22px 0;background:var(--bg-2)}
+.marquee-track{display:flex;gap:56px;width:max-content;animation:marq 38s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{font-family:var(--f-display);font-size:clamp(22px,2.6vw,34px);font-weight:700;color:#3b423d;white-space:nowrap;display:flex;align-items:center;gap:56px;transition:color .2s}
+.marquee-track span:hover{color:var(--ink)}
+.marquee-track span::after{content:"✦";color:var(--accent);font-size:.6em}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* sections */
+main>section{padding:clamp(80px,11vw,140px) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:56px;flex-wrap:wrap}
+.sec-head .lead{max-width:440px}
+
+/* programs bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px;display:flex;flex-direction:column;overflow:hidden;transition:transform .3s ease,border-color .3s}
+a.card:hover{transform:translateY(-2px);border-color:#3a433d}
+.card::after{content:"";position:absolute;inset:0;background:radial-gradient(400px 200px at var(--mx,50%) var(--my,0%),rgba(198,244,50,.07),transparent 70%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover::after{opacity:1}
+.c-cs{grid-column:span 4}.c-ce{grid-column:span 2}.c-tc{grid-column:span 3}.c-next{grid-column:span 3}
+.code-tag{font-family:var(--f-mono);font-size:13px;color:var(--accent);border:1px solid rgba(198,244,50,.3);border-radius:8px;padding:4px 10px;align-self:flex-start}
+.card h3{font-size:clamp(24px,2.3vw,32px);margin:18px 0 12px}
+.card p{color:var(--muted);max-width:520px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tags li{list-style:none;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.card-more{margin-top:auto;padding-top:26px;font-weight:700;display:inline-flex;gap:8px;align-items:center;color:var(--ink)}
+.card-more .arr{transition:transform .25s}
+a.card:hover .card-more .arr{transform:translateX(5px)}
+
+.snippet{margin-top:26px;background:#0e110f;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-family:var(--f-mono);font-size:13px;line-height:1.7;color:var(--muted);overflow:hidden}
+.snippet .ln{color:#3b423d;margin-right:14px;user-select:none}
+.cs-row{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:end;flex:1}
+
+/* chip visual */
+.chipviz{margin-top:26px;aspect-ratio:1.5;border-radius:12px;background:#0e110f;border:1px solid var(--line);position:relative;display:grid;place-items:center;overflow:hidden}
+.chipviz svg{width:82%;height:auto}
+.pulse{stroke-dasharray:6 120;animation:pulse 3s linear infinite}
+@keyframes pulse{to{stroke-dashoffset:-126}}
+.wave path{stroke-dasharray:400;stroke-dashoffset:400;animation:wave 3.2s ease-in-out infinite}
+@keyframes wave{50%{stroke-dashoffset:0}100%{stroke-dashoffset:-400}}
+
+.c-next{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.c-next p{color:rgba(11,13,12,.72)}
+.c-next .code-tag{color:var(--accent-ink);border-color:rgba(11,13,12,.3)}
+.c-next .card-more{color:var(--accent-ink)}
+.c-next::after{display:none}
+.big-arrow{position:absolute;right:26px;top:26px;width:56px;height:56px;border-radius:50%;background:var(--accent-ink);color:var(--accent);display:grid;place-items:center;font-size:24px;transition:transform .3s}
+a.c-next:hover .big-arrow{transform:rotate(-45deg)}
+
+/* path */
+.path{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:y}
+.step{border-top:2px solid var(--line);padding-top:26px;position:relative}
+.step::before{content:"";position:absolute;top:-2px;left:0;height:2px;width:0;background:var(--accent);transition:width .6s ease}
+.step:hover::before{width:100%}
+.step .yr{font-family:var(--f-mono);font-size:13px;color:var(--accent)}
+.step h3{font-size:22px;margin:14px 0 10px}
+.step p{color:var(--muted);font-size:16px}
+
+/* big statement */
+.statement{background:var(--bg-2);border-block:1px solid var(--line)}
+.statement p{font-family:var(--f-display);font-weight:700;font-size:clamp(30px,4.6vw,64px);line-height:1.12;letter-spacing:-.02em}
+.statement .w{color:#3b423d;transition:color .4s}
+.statement .w.on{color:var(--ink)}
+.statement .w.acc.on{color:var(--accent)}
+
+/* admission */
+.admit{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.switch{display:inline-flex;padding:5px;border:1px solid var(--line);border-radius:999px;background:var(--surface);margin-bottom:30px}
+.switch button{min-height:44px;padding:0 22px;border-radius:999px;font-weight:700;color:var(--muted);transition:background .25s,color .25s}
+.switch button[aria-selected="true"]{background:var(--accent);color:var(--accent-ink)}
+.steps{display:flex;flex-direction:column;gap:12px}
+.astep{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:22px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);transition:border-color .3s,transform .3s}
+.astep:hover{border-color:#3a433d;transform:translateX(4px)}
+.astep .n{width:56px;height:56px;border-radius:14px;background:#0e110f;border:1px solid var(--line);display:grid;place-items:center;font-family:var(--f-mono);color:var(--accent);font-weight:600}
+.astep h3{font-family:var(--f-body);font-size:19px;font-weight:700;letter-spacing:0;margin:4px 0 4px}
+.astep p{color:var(--muted);font-size:16px}
+.panel[hidden]{display:none}
+
+/* faq */
+.faq{max-width:900px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 0;font-weight:700;font-size:clamp(18px,1.6vw,22px)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{flex:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:transform .3s,background .3s}
+.faq details[open] .pm{transform:rotate(45deg);background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.faq details p{color:var(--muted);padding:0 0 26px;max-width:720px}
+
+/* close */
+.close{text-align:center;position:relative;overflow:hidden}
+.close h2{font-size:clamp(44px,8vw,120px);font-weight:800;margin:20px 0 34px}
+.close h2 span{color:var(--accent)}
+.close .hero-actions{justify-content:center}
+
+footer{border-top:1px solid var(--line);padding:56px 0 40px;color:var(--muted);font-size:15px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.foot h4{color:var(--ink);font-size:14px;margin-bottom:14px;font-family:var(--f-mono);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.foot a:hover{color:var(--ink)}
+.foot-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:13px}
+
+/* responsive */
+@media (max-width:1080px){
+  .nav-links{display:none}
+  .burger{display:grid}
+  .nav-cta{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .c-cs,.c-ce,.c-tc,.c-next{grid-column:span 6}
+  .cs-row{grid-template-columns:1fr}
+  .path{grid-template-columns:1fr 1fr;gap:36px 18px}
+  .admit{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .path{grid-template-columns:1fr}
+  .hero-actions .btn{width:100%}
+  .term-body{font-size:12.5px;min-height:290px;padding:18px}
+  .foot{grid-template-columns:1fr}
+  .card{padding:24px}
+  .switch{display:flex}
+  .switch button{flex:1;padding:0 12px}
+  .astep{grid-template-columns:44px 1fr;padding:18px;gap:14px}
+  .astep .n{width:44px;height:44px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  [data-enter]>*{opacity:1;transform:none}
+  .statement .w{color:var(--ink)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Перейти до змісту</a>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Фаховий коледж інформаційних технологій — на початок">
+      <span class="logo-mark">{ }</span>
+      <span>Коледж ІТ<small>Львівська політехніка</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Головне меню">
+      <a href="#programs">Спеціальності</a>
+      <a href="#path">Навчання</a>
+      <a href="#admission">Вступ</a>
+      <a href="#faq">Питання</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+    <a href="#admission" class="btn btn-primary nav-cta">Подати документи</a>
+    <button class="burger" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mmenu"><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mmenu">
+  <a href="#programs">Спеціальності</a>
+  <a href="#path">Навчання</a>
+  <a href="#admission">Вступ</a>
+  <a href="#faq">Питання</a>
+  <a href="#contacts">Контакти</a>
+  <a href="#admission" class="btn btn-primary">Подати документи</a>
+</div>
+
+<main id="main">
+  <section class="hero" id="top">
+    <canvas id="net" aria-hidden="true"></canvas>
+    <div class="wrap hero-grid">
+      <div data-enter>
+        <span class="eyebrow">ВСП НУ «Львівська політехніка»</span>
+        <h1>Фаховий коледж <span class="hl">інформаційних <span class="nw">технологій<span class="cursor" aria-hidden="true"></span></span></span></h1>
+        <p class="lead">Програмування, комп'ютерна інженерія й телекомунікації у Львові — вступ після 9 або 11 класу, диплом фахового молодшого бакалавра і прямий шлях до Політехніки.</p>
+        <div class="hero-actions">
+          <a href="#admission" class="btn btn-primary">Дізнатися про вступ <span class="arr">→</span></a>
+          <a href="#programs" class="btn btn-ghost">Обрати спеціальність</a>
+        </div>
+        <div class="hero-facts">
+          <span class="chip"><b>3</b> ІТ-спеціальності</span>
+          <span class="chip">після <b>9</b> або <b>11</b> класу</span>
+          <span class="chip">денна форма</span>
+        </div>
+      </div>
+      <div data-enter>
+        <div class="term" aria-hidden="true">
+          <div class="term-bar"><i></i><i></i><i></i><span>~/college — zsh</span></div>
+          <div class="term-body" id="term"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Python</span><span>JavaScript</span><span>C++</span><span>Linux</span><span>Git</span><span>SQL</span><span>Мережі</span><span>Arduino</span><span>Кібербезпека</span><span>IoT</span><span>Python</span><span>JavaScript</span><span>C++</span><span>Linux</span><span>Git</span><span>SQL</span><span>Мережі</span><span>Arduino</span><span>Кібербезпека</span><span>IoT</span>
+    </div>
+  </div>
+
+  <section id="programs">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Спеціальності</span>
+          <h2>Три напрями. <em>Один фах — ІТ.</em></h2>
+        </div>
+        <p class="lead">Кожна програма — це пари в лабораторіях, реальні проєкти й практика. Обирай те, що хочеш будувати: софт, залізо чи мережі.</p>
+      </div>
+
+      <div class="bento">
+        <a href="#admission" class="card c-cs">
+          <span class="code-tag">F3 · 122</span>
+          <div class="cs-row">
+            <div>
+              <h3>Комп'ютерні науки</h3>
+              <p>Алгоритми, веб і мобільна розробка, бази даних. Від першого «Hello, world» до власного застосунку в портфоліо.</p>
+              <ul class="tags"><li>Python</li><li>JavaScript</li><li>SQL</li><li>Git</li></ul>
+            </div>
+            <div class="snippet" aria-hidden="true"><span class="ln">1</span><span class="t-k">def</span> <span class="t-p">student</span>(name):
+<span class="ln">2</span>    skills = [<span class="t-s">"python"</span>, <span class="t-s">"web"</span>]
+<span class="ln">3</span>    <span class="t-k">while</span> learning:
+<span class="ln">4</span>        skills.append(next_topic())
+<span class="ln">5</span>    <span class="t-k">return</span> <span class="t-s">"junior dev"</span></div>
+          </div>
+          <span class="card-more">Як вступити <span class="arr">→</span></span>
+        </a>
+
+        <a href="#admission" class="card c-ce">
+          <span class="code-tag">F7 · 123</span>
+          <h3>Комп'ютерна інженерія</h3>
+          <p>Як влаштований комп'ютер зсередини: схемотехніка, мікроконтролери, системне адміністрування.</p>
+          <div class="chipviz" aria-hidden="true">
+            <svg viewBox="0 0 200 130" fill="none">
+              <g stroke="#2f3631" stroke-width="1.5">
+                <path d="M0 30H70M0 65H70M0 100H70M130 30H200M130 65H200M130 100H200"/>
+              </g>
+              <g stroke="#c6f432" stroke-width="2" class="pulse">
+                <path d="M0 30H70"/><path d="M130 65H200" style="animation-delay:-1s"/><path d="M0 100H70" style="animation-delay:-2s"/>
+              </g>
+              <rect x="70" y="20" width="60" height="90" rx="8" fill="#171b18" stroke="#c6f432" stroke-width="1.5"/>
+              <text x="100" y="70" fill="#c6f432" font-family="JetBrains Mono,monospace" font-size="13" text-anchor="middle">MCU</text>
+            </svg>
+          </div>
+          <span class="card-more">Як вступити <span class="arr">→</span></span>
+        </a>
+
+        <a href="#admission" class="card c-tc">
+          <span class="code-tag">G5 · 172</span>
+          <h3>Телекомунікації та комп'ютерні технології</h3>
+          <p>Мережі, зв'язок, Інтернет речей. Налаштовуєш маршрутизатори, будуєш мережу й розумієш, як дані летять світом.</p>
+          <div class="chipviz wave" aria-hidden="true" style="aspect-ratio:2.6">
+            <svg viewBox="0 0 300 110" fill="none">
+              <path d="M0 55 Q 25 10 50 55 T 100 55 T 150 55 T 200 55 T 250 55 T 300 55" stroke="#3ee6c4" stroke-width="2"/>
+              <path d="M0 55 Q 37 95 75 55 T 150 55 T 225 55 T 300 55" stroke="#c6f432" stroke-width="2" style="animation-delay:-1.4s"/>
+            </svg>
+          </div>
+          <ul class="tags"><li>Мережі</li><li>IoT</li><li>Зв'язок</li></ul>
+          <span class="card-more">Як вступити <span class="arr">→</span></span>
+        </a>
+
+        <a href="#path" class="card c-next">
+          <span class="big-arrow" aria-hidden="true">↗</span>
+          <span class="code-tag">після коледжу</span>
+          <h3>Далі — Львівська політехніка</h3>
+          <p>Коледж є структурним підрозділом Політехніки. Випускники продовжують навчання на бакалавраті за скороченим терміном.</p>
+          <span class="card-more">Подивитися шлях <span class="arr">→</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="statement" aria-label="Про коледж">
+    <div class="wrap">
+      <p id="stmt">Тут не просто вчать інформатику. Тут <span class="acc">пишуть</span> перший код, <span class="acc">паяють</span> першу плату і <span class="acc">запускають</span> першу мережу — ще до вісімнадцяти.</p>
+    </div>
+  </section>
+
+  <section id="path">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Навчання</span>
+          <h2>Шлях від школи <em>до професії.</em></h2>
+        </div>
+        <p class="lead">Після 9 класу перший курс поєднує шкільну програму з основами фаху. Після 11 класу починаєш одразу з профільних дисциплін.</p>
+      </div>
+      <div class="path">
+        <div class="step"><span class="yr mono">01 / старт</span><h3>База</h3><p>Математика, фізика, інформатика й перші мови програмування.</p></div>
+        <div class="step"><span class="yr mono">02 / профіль</span><h3>Фах</h3><p>Профільні дисципліни спеціальності, лабораторні та курсові проєкти.</p></div>
+        <div class="step"><span class="yr mono">03 / практика</span><h3>Справжні задачі</h3><p>Виробнича практика, командні проєкти й портфоліо для першої роботи.</p></div>
+        <div class="step"><span class="yr mono">04 / диплом</span><h3>Фаховий молодший бакалавр</h3><p>Диплом, робота в ІТ або вступ до Львівської політехніки на скорочений термін.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="admission">
+    <div class="wrap admit">
+      <div>
+        <span class="eyebrow">Вступ</span>
+        <h2>Як вступити <em>до коледжу.</em></h2>
+        <p class="lead">Обери свою основу вступу — покажемо, як виглядає шлях. Точні дати й перелік документів публікує приймальна комісія.</p>
+        <div class="hero-actions" style="margin-top:30px">
+          <a href="https://itcollege.lviv.ua" class="btn btn-primary">Сайт приймальної комісії <span class="arr">→</span></a>
+        </div>
+      </div>
+      <div>
+        <div class="switch" role="tablist" aria-label="Основа вступу">
+          <button role="tab" id="t9" aria-selected="true" aria-controls="p9">Після 9 класу</button>
+          <button role="tab" id="t11" aria-selected="false" aria-controls="p11" tabindex="-1">Після 11 класу</button>
+        </div>
+        <div class="panel steps" id="p9" role="tabpanel" aria-labelledby="t9">
+          <div class="astep"><span class="n">01</span><div><h3>Обери спеціальність</h3><p>Комп'ютерні науки, комп'ютерна інженерія або телекомунікації.</p></div></div>
+          <div class="astep"><span class="n">02</span><div><h3>Зареєструй кабінет вступника</h3><p>Заява подається онлайн через електронний кабінет.</p></div></div>
+          <div class="astep"><span class="n">03</span><div><h3>Пройди вступне випробування</h3><p>Формат і дати визначають Правила прийому на поточний рік.</p></div></div>
+          <div class="astep"><span class="n">04</span><div><h3>Подай оригінали і стань студентом</h3><p>Після рекомендації до зарахування — документи і перше вересня.</p></div></div>
+        </div>
+        <div class="panel steps" id="p11" role="tabpanel" aria-labelledby="t11" hidden>
+          <div class="astep"><span class="n">01</span><div><h3>Обери спеціальність</h3><p>Ті самі три напрями, навчання стартує одразу з профільних предметів.</p></div></div>
+          <div class="astep"><span class="n">02</span><div><h3>Візьми результати НМТ</h3><p>Для вступу після 11 класу враховуються результати мультитесту.</p></div></div>
+          <div class="astep"><span class="n">03</span><div><h3>Подай заяву онлайн</h3><p>Через електронний кабінет вступника в строки вступної кампанії.</p></div></div>
+          <div class="astep"><span class="n">04</span><div><h3>Отримай рекомендацію</h3><p>Подай оригінали документів — і ласкаво просимо в коледж.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <span class="eyebrow">Питання</span>
+      <h2>Часті питання <em>вступників.</em></h2>
+      <div class="faq">
+        <details><summary>Чи можна вступити, якщо я ніколи не програмував? <span class="pm" aria-hidden="true">+</span></summary><p>Так. Перший курс починається з основ, а все потрібне ти вивчиш на парах і в лабораторіях.</p></details>
+        <details><summary>Який диплом я отримаю? <span class="pm" aria-hidden="true">+</span></summary><p>Диплом фахового молодшого бакалавра державного зразка за обраною спеціальністю.</p></details>
+        <details><summary>Чи можна продовжити навчання в Політехніці? <span class="pm" aria-hidden="true">+</span></summary><p>Так. Коледж — відокремлений структурний підрозділ Львівської політехніки, і випускники вступають на бакалаврат за скороченим терміном навчання.</p></details>
+        <details><summary>Чим відрізняються три спеціальності? <span class="pm" aria-hidden="true">+</span></summary><p>Комп'ютерні науки — це програмне забезпечення. Комп'ютерна інженерія — апаратна частина і системи. Телекомунікації — мережі та зв'язок.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="close" id="contacts">
+    <div class="wrap">
+      <span class="eyebrow">Вступна кампанія</span>
+      <h2>Твій перший коміт —<br><span>тут.</span></h2>
+      <div class="hero-actions">
+        <a href="#admission" class="btn btn-primary">Подати документи <span class="arr">→</span></a>
+        <a href="https://lpnu.ua" class="btn btn-ghost">Львівська політехніка</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#top" class="logo"><span class="logo-mark">{ }</span><span>Коледж ІТ<small>Львівська політехніка</small></span></a>
+        <p style="margin-top:18px;max-width:320px">Відокремлений структурний підрозділ «Фаховий коледж інформаційних технологій Національного університету «Львівська політехніка».</p>
+      </div>
+      <div><h4>Навчання</h4><ul><li><a class="link" href="#programs">Спеціальності</a></li><li><a class="link" href="#path">Освітній шлях</a></li><li><a class="link" href="#faq">Питання</a></li></ul></div>
+      <div><h4>Вступ</h4><ul><li><a class="link" href="#admission">Після 9 класу</a></li><li><a class="link" href="#admission">Після 11 класу</a></li><li><a class="link" href="https://itcollege.lviv.ua">Приймальна комісія</a></li></ul></div>
+      <div><h4>Адреса</h4><ul><li>вул. Володимира Великого, Львів</li><li><a class="link" href="https://itcollege.lviv.ua">itcollege.lviv.ua</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Фаховий коледж інформаційних технологій НУ «Львівська політехніка»</span><span class="mono">концепт редизайну</span></div>
+  </div>
+</footer>
+
+<script>
+(()=>{
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// nav
+const nav=document.getElementById('nav');
+const onScroll=()=>nav.classList.toggle('scrolled',scrollY>20);
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+const burger=document.querySelector('.burger'),mm=document.getElementById('mmenu');
+const setMenu=o=>{burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Закрити меню':'Відкрити меню');mm.classList.toggle('open',o);document.body.style.overflow=o?'hidden':''};
+burger.addEventListener('click',()=>setMenu(burger.getAttribute('aria-expanded')!=='true'));
+mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
+
+// card glow follows pointer
+document.querySelectorAll('.card').forEach(c=>c.addEventListener('pointermove',e=>{
+  const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');
+}));
+
+// tabs
+const tabs=[...document.querySelectorAll('[role=tab]')];
+const select=t=>{tabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on});};
+tabs.forEach((t,i)=>{t.addEventListener('click',()=>select(t));t.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=tabs[(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];select(n);n.focus();}})});
+
+// terminal typing
+const term=document.getElementById('term');
+const lines=[
+  ['<span class="t-p">$</span> ','whoami'],['<span class="t-c">','абітурієнт, 15 років</span>'],
+  ['<span class="t-p">$</span> ','git clone itcollege/future'],['<span class="t-c">','Cloning into \'future\'... done.</span>'],
+  ['<span class="t-p">$</span> ','cd future && ls'],['<span class="t-k">','computer-science/  engineering/  telecom/</span>'],
+  ['<span class="t-p">$</span> ','./start --year 1'],['<span class="t-ok">','✓ python  ✓ linux  ✓ мережі  ✓ arduino</span>'],
+  ['<span class="t-s">','→ next: Львівська політехніка</span>']
+];
+if(reduce){term.innerHTML=lines.map(l=>l[0]+l[1]+(l[0].startsWith('<span class="t-p')?'':'')).join('\n');}
+else{
+  let li=0,ci=0,out='';
+  const tick=()=>{
+    if(li>=lines.length){setTimeout(()=>{li=0;ci=0;out='';tick()},4000);term.innerHTML=out+'<span class="term-cursor"></span>';return;}
+    const [pre,txt]=lines[li];const isCmd=pre.includes('t-p');
+    const close=isCmd?'':'';
+    if(!isCmd){out+=pre+txt+'\n';li++;term.innerHTML=out+'<span class="term-cursor"></span>';setTimeout(tick,260);return;}
+    ci++;term.innerHTML=out+pre+txt.slice(0,ci)+'<span class="term-cursor"></span>';
+    if(ci>=txt.length){out+=pre+txt+'\n';li++;ci=0;setTimeout(tick,420);}else setTimeout(tick,45+Math.random()*50);
+  };
+  setTimeout(tick,700);
+}
+
+// statement words light up inside its own section
+const stmt=document.getElementById('stmt');
+stmt.innerHTML=stmt.innerHTML.replace(/(<span class="acc">)?([^\s<]+)(<\/span>)?/g,(m,a,w,c)=>`<span class="w${a?' acc':''}">${w}</span>`);
+const words=[...stmt.querySelectorAll('.w')];
+if(!reduce){
+  const upd=()=>{const r=stmt.getBoundingClientRect();const p=Math.min(1,Math.max(0,(innerHeight*.85-r.top)/(r.height+innerHeight*.4)));const n=Math.round(p*words.length);words.forEach((w,i)=>w.classList.toggle('on',i<n));};
+  addEventListener('scroll',upd,{passive:true});upd();
+}else words.forEach(w=>w.classList.add('on'));
+
+// network canvas
+const cv=document.getElementById('net'),ctx=cv.getContext('2d');
+let W,H,pts=[],mouse={x:-999,y:-999},raf;
+const init=()=>{const d=Math.min(devicePixelRatio||1,2);W=cv.clientWidth;H=cv.clientHeight;cv.width=W*d;cv.height=H*d;ctx.setTransform(d,0,0,d,0,0);
+  const n=Math.round(Math.min(90,W*H/16000));pts=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3}));};
+const draw=()=>{ctx.clearRect(0,0,W,H);
+  for(const p of pts){if(!reduce){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;}}
+  for(let i=0;i<pts.length;i++){const a=pts[i];
+    for(let j=i+1;j<pts.length;j++){const b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=dx*dx+dy*dy;if(d<17000){ctx.strokeStyle=`rgba(198,244,50,${.16*(1-d/17000)})`;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}
+    const md=(a.x-mouse.x)**2+(a.y-mouse.y)**2;
+    ctx.fillStyle=md<22000?'#c6f432':'rgba(238,242,236,.35)';ctx.beginPath();ctx.arc(a.x,a.y,md<22000?2.4:1.4,0,7);ctx.fill();}
+  if(!reduce)raf=requestAnimationFrame(draw);};
+init();draw();addEventListener('resize',()=>{init();if(reduce)draw();});
+cv.parentElement.addEventListener('pointermove',e=>{const r=cv.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;});
+new IntersectionObserver(([e])=>{if(reduce)return;cancelAnimationFrame(raf);if(e.isIntersecting)draw();}).observe(cv);
+})();
+</script>
+</body>
+</html>
