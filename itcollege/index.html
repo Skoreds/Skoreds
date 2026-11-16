@@ -3,316 +3,172 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Коледж ІТ Політехніки</title>
-<meta name="description" content="Відокремлений структурний підрозділ «Фаховий коледж інформаційних технологій Національного університету «Львівська політехніка». Спеціальності, вступ після 9 та 11 класу.">
-<meta name="theme-color" content="#0b3a82">
-<meta property="og:title" content="Фаховий коледж інформаційних технологій НУ «Львівська політехніка»">
-<meta property="og:description" content="Комп'ютерні науки, комп'ютерна інженерія, телекомунікації. Вступ після 9 та 11 класу.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b3a82'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='700' font-size='12' text-anchor='middle' fill='%23fff'%3EКІТ%3C/text%3E%3C/svg%3E">
+<title>ІТ коледж Львівської політехніки</title>
+<meta name="description" content="ВСП «Фаховий коледж інформаційних технологій Національного університету «Львівська політехніка». З 1945 року. Комп'ютерні науки, комп'ютерна інженерія, телекомунікації, мережі та IoT. Вступ після 9 та 11 класу.">
+<meta name="theme-color" content="#14206b">
+<meta property="og:title" content="ІТ коледж Львівської політехніки">
+<meta property="og:description" content="Фахова передвища освіта в галузі ІТ та зв'язку з 1945 року. Вступ після 9 та 11 класу.">
+<meta property="og:image" content="img/teamviewer.jpg">
+<link rel="icon" href="img/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --navy:#0a2a5e; --blue:#0b3a82; --blue-2:#1d5fd1; --sky:#e9f1fc; --sky-2:#f5f8fd;
-  --ink:#14213d; --muted:#5a6782; --line:#dbe3ef; --white:#fff; --gold:#f2b705;
-  --r:12px; --wrap:1220px; --gut:clamp(16px,4vw,32px);
-  --f-head:"Montserrat",system-ui,sans-serif; --f-body:"Inter",system-ui,sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--white);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-svg{display:block}
-button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-:focus-visible{outline:3px solid var(--blue-2);outline-offset:2px;border-radius:4px}
-.skip{position:fixed;left:16px;top:-60px;z-index:100;background:var(--blue);color:#fff;padding:10px 16px;border-radius:8px;font-weight:600}
-.skip:focus{top:12px}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
-h1,h2,h3{font-family:var(--f-head);line-height:1.2;color:var(--navy)}
-h2{font-size:clamp(28px,3.2vw,40px);font-weight:700;margin:10px 0 16px}
-.kicker{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-2);display:inline-flex;align-items:center;gap:10px}
-.kicker::before{content:"";width:24px;height:2px;background:var(--gold)}
-.lead{color:var(--muted);font-size:18px;max-width:640px}
-
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border-radius:8px;font-weight:600;font-size:16px;transition:transform .15s,background .2s,border-color .2s,box-shadow .2s}
-.btn:hover{transform:translateY(-1px)}
-.btn:active{transform:scale(.98)}
-.btn-primary{background:var(--blue);color:#fff}
-.btn-primary:hover{background:var(--navy);box-shadow:0 8px 20px -8px rgba(11,58,130,.5)}
-.btn-light{background:#fff;color:var(--blue)}
-.btn-light:hover{background:var(--sky)}
-.btn-outline{border:1.5px solid rgba(255,255,255,.55);color:#fff}
-.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-.btn-ghost{border:1.5px solid var(--line);color:var(--blue)}
-.btn-ghost:hover{border-color:var(--blue)}
-.link{color:var(--blue-2);font-weight:600;background:linear-gradient(currentColor,currentColor) 0 100%/0 1.5px no-repeat;transition:background-size .3s}
-.link:hover{background-size:100% 1.5px}
-
-/* top bar */
-.topbar{background:var(--navy);color:#c9d6ee;font-size:14px}
-.topbar .wrap{display:flex;justify-content:space-between;align-items:center;min-height:44px;gap:20px}
-.topbar nav{display:flex;gap:24px}
-.topbar a{display:inline-flex;align-items:center;min-height:44px;transition:color .2s}
-.topbar a:hover{color:#fff}
-.lang{display:flex;gap:4px}
-.lang a{padding:0 10px;border-radius:6px}
-.lang a[aria-current]{color:#fff;font-weight:600;background:rgba(255,255,255,.1)}
-
-/* header */
-.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);transition:box-shadow .2s}
-.header.scrolled{box-shadow:0 4px 20px -10px rgba(10,42,94,.25)}
-.header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:84px}
-.brand{display:flex;align-items:center;gap:14px}
-.crest{width:52px;height:52px;flex:none}
-.brand-name{font-family:var(--f-head);font-weight:700;font-size:15px;line-height:1.25;color:var(--navy)}
-.brand-name small{display:block;font-family:var(--f-body);font-weight:500;font-size:13px;color:var(--muted)}
-.menu{display:flex;gap:4px}
-.menu a{padding:10px 14px;border-radius:8px;font-weight:600;font-size:15px;color:var(--ink);transition:background .2s,color .2s}
-.menu a:hover{background:var(--sky);color:var(--blue)}
-.burger{display:none;width:46px;height:46px;border-radius:8px;border:1.5px solid var(--line);place-items:center}
-.burger span,.burger span::before,.burger span::after{display:block;width:20px;height:2px;background:var(--navy);transition:.25s;position:relative}
-.burger span::before,.burger span::after{content:"";position:absolute;left:0}
-.burger span::before{top:-6px}.burger span::after{top:6px}
-.burger[aria-expanded="true"] span{background:transparent}
-.burger[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
-.burger[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
-.mobile-menu{display:none;position:fixed;inset:0;top:0;background:#fff;z-index:60;padding:100px var(--gut) 32px;flex-direction:column;overflow:auto}
-.mobile-menu.open{display:flex}
-.mobile-menu a{font-family:var(--f-head);font-weight:700;font-size:22px;color:var(--navy);padding:14px 0;border-bottom:1px solid var(--line)}
-.mobile-menu .btn{margin-top:24px;border:0;font-family:var(--f-body);font-size:16px;color:#fff}
-.burger{position:relative;z-index:61}
-
-/* hero */
-.hero{position:relative;background:linear-gradient(120deg,var(--navy) 0%,var(--blue) 55%,#1650b4 100%);color:#fff;overflow:hidden}
-.hero::after{content:"";position:absolute;inset:0;background:
-  radial-gradient(circle at 85% 20%,rgba(255,255,255,.10) 0 180px,transparent 181px),
-  radial-gradient(circle at 85% 20%,transparent 0 260px,rgba(255,255,255,.06) 261px 262px,transparent 263px),
-  radial-gradient(circle at 85% 20%,transparent 0 340px,rgba(255,255,255,.05) 341px 342px,transparent 343px);pointer-events:none}
-.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:56px;align-items:center;padding-top:clamp(56px,8vw,96px);padding-bottom:clamp(120px,12vw,150px)}
-.hero .kicker{color:#bcd3ff}
-.hero h1{color:#fff;font-size:clamp(32px,4.2vw,54px);font-weight:800;margin:16px 0 20px;letter-spacing:-.01em}
-.hero p{color:#d6e2f8;font-size:clamp(17px,1.4vw,19px);max-width:600px;margin-bottom:32px}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
-.hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:28px;backdrop-filter:blur(6px)}
-.hero-card h2{color:#fff;font-size:20px;margin:0 0 6px}
-.hero-card .sub{color:#bcd3ff;font-size:14px;margin-bottom:18px}
-.hero-card ul{list-style:none;display:flex;flex-direction:column}
-.hero-card li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px solid rgba(255,255,255,.14)}
-.hero-card li:first-child{border-top:0}
-.hero-card .ico{flex:none;width:40px;height:40px;border-radius:10px;background:#fff;color:var(--blue);display:grid;place-items:center}
-.hero-card b{display:block;font-weight:600}
-.hero-card span{color:#c9d6ee;font-size:15px}
-
-[data-enter]>*{opacity:0;transform:translateY(14px);animation:enter .7s ease forwards}
-[data-enter]>*:nth-child(2){animation-delay:.1s}[data-enter]>*:nth-child(3){animation-delay:.2s}[data-enter]>*:nth-child(4){animation-delay:.3s}
-@keyframes enter{to{opacity:1;transform:none}}
-
-/* quick links */
-.quick{position:relative;z-index:2;margin-top:-72px}
-.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.q{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:0 16px 40px -24px rgba(10,42,94,.35);display:flex;flex-direction:column;gap:10px;transition:transform .2s,border-color .2s,box-shadow .2s}
-.q:hover{transform:translateY(-2px);border-color:var(--blue-2);box-shadow:0 20px 40px -20px rgba(10,42,94,.4)}
-.q .ico{width:44px;height:44px;border-radius:10px;background:var(--sky);color:var(--blue);display:grid;place-items:center;transition:background .2s,color .2s}
-.q:hover .ico{background:var(--blue);color:#fff}
-.q b{font-family:var(--f-head);font-size:17px;color:var(--navy)}
-.q span{color:var(--muted);font-size:15px;line-height:1.5}
-
-main>section{padding:clamp(72px,9vw,110px) 0}
-.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:44px}
-.sec-head .lead{max-width:460px}
-.bg-soft{background:var(--sky-2);border-block:1px solid var(--line)}
-
-/* about */
-.about{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
-.about p+p{margin-top:16px}
-.about .lead{margin-bottom:8px}
-.facts{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.fact{border:1px solid var(--line);border-radius:var(--r);padding:24px;background:#fff}
-.fact .n{font-family:var(--f-head);font-weight:800;font-size:34px;color:var(--blue);line-height:1.1}
-.fact p{color:var(--muted);font-size:15px;margin-top:6px}
-.fact.dark{background:var(--blue);border-color:var(--blue)}
-.fact.dark .n{color:#fff}.fact.dark p{color:#d6e2f8}
-
-/* programs */
-.programs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.prog{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s,border-color .2s}
-.prog:hover{transform:translateY(-2px);box-shadow:0 20px 40px -24px rgba(10,42,94,.35);border-color:#b9cbe8}
-.prog-top{background:linear-gradient(135deg,var(--sky),#dbe8fb);padding:26px;display:flex;justify-content:space-between;align-items:flex-start;min-height:120px}
-.prog-top .ico{width:56px;height:56px;border-radius:14px;background:var(--blue);color:#fff;display:grid;place-items:center}
-.code{font-size:13px;font-weight:700;color:var(--blue);background:#fff;border:1px solid #c9d8f0;border-radius:6px;padding:4px 10px}
-.prog-body{padding:26px;display:flex;flex-direction:column;flex:1}
-.prog h3{font-size:21px;margin-bottom:10px}
-.prog p{color:var(--muted);font-size:16px}
-.prog ul{list-style:none;margin:18px 0 22px;display:flex;flex-direction:column;gap:8px}
-.prog li{font-size:15px;display:flex;gap:10px;align-items:flex-start}
-.prog li::before{content:"";flex:none;width:6px;height:6px;margin-top:9px;border-radius:50%;background:var(--blue-2)}
-.prog .meta{margin-top:auto;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:14px;color:var(--muted)}
-
-/* path */
-.path{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;position:relative}
-.step{padding:0 24px 0 0;position:relative}
-.step .dot{width:48px;height:48px;border-radius:50%;background:#fff;border:2px solid var(--blue);color:var(--blue);display:grid;place-items:center;font-family:var(--f-head);font-weight:700;position:relative;z-index:1;transition:background .2s,color .2s}
-.step:hover .dot{background:var(--blue);color:#fff}
-.step::before{content:"";position:absolute;top:24px;left:48px;right:0;height:2px;background:var(--line)}
-.step:last-child::before{display:none}
-.step h3{font-size:19px;margin:20px 0 8px}
-.step p{color:var(--muted);font-size:16px}
-
-/* admission */
-.admit{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
-.notice{margin-top:28px;border-left:4px solid var(--gold);background:#fffbea;padding:18px 20px;border-radius:0 8px 8px 0;font-size:15px;color:#5b4a0a}
-.tabs{display:inline-flex;border:1px solid var(--line);border-radius:10px;padding:4px;background:#fff;margin-bottom:22px}
-.tabs button{min-height:44px;padding:0 20px;border-radius:7px;font-weight:600;color:var(--muted);transition:background .2s,color .2s}
-.tabs button[aria-selected="true"]{background:var(--blue);color:#fff}
-.alist{display:flex;flex-direction:column;gap:12px}
-.a{display:grid;grid-template-columns:44px 1fr;gap:16px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px;transition:border-color .2s}
-.a:hover{border-color:var(--blue-2)}
-.a .n{width:44px;height:44px;border-radius:10px;background:var(--sky);color:var(--blue);display:grid;place-items:center;font-weight:700}
-.a h3{font-family:var(--f-body);font-size:17px;font-weight:700;margin:2px 0 2px;color:var(--ink)}
-.a p{color:var(--muted);font-size:15px}
-[role=tabpanel][hidden]{display:none}
-
-/* faq */
-.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
-details{border-bottom:1px solid var(--line)}
-details:first-child{border-top:1px solid var(--line)}
-summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font-weight:600;font-size:18px;color:var(--navy)}
-summary::-webkit-details-marker{display:none}
-summary .pm{flex:none;width:32px;height:32px;border-radius:50%;background:var(--sky);color:var(--blue);display:grid;place-items:center;font-size:20px;transition:transform .25s,background .2s,color .2s}
-details[open] summary .pm{transform:rotate(45deg);background:var(--blue);color:#fff}
-details p{color:var(--muted);padding:0 0 22px;max-width:680px}
-
-/* contact band */
-.band{background:var(--blue);color:#fff;border-radius:20px;padding:clamp(32px,5vw,56px);display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;position:relative;overflow:hidden}
-.band::after{content:"";position:absolute;right:-80px;top:-80px;width:300px;height:300px;border-radius:50%;border:40px solid rgba(255,255,255,.06)}
-.band h2{color:#fff;margin-top:0}
-.band p{color:#d6e2f8}
-.band .kicker{color:#bcd3ff}
-.band-list{list-style:none;display:flex;flex-direction:column;gap:14px;position:relative;z-index:1}
-.band-list li{display:flex;gap:14px;align-items:center}
-.band-list .ico{width:42px;height:42px;border-radius:10px;background:rgba(255,255,255,.12);display:grid;place-items:center;flex:none}
-.band .hero-actions{margin-top:24px}
-
-footer{background:var(--navy);color:#b7c6e3;font-size:15px;padding:56px 0 28px}
-.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}
-footer .brand-name{color:#fff}footer .brand-name small{color:#9fb2d6}
-footer h4{color:#fff;font-family:var(--f-head);font-size:15px;margin-bottom:14px}
-footer ul{list-style:none;display:flex;flex-direction:column;gap:8px}
-footer ul a{display:inline-block;padding:2px 0;transition:color .2s}
-footer ul a:hover{color:#fff}
-.foot-bottom{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px}
-
-@media (max-width:1080px){
-  .menu,.header .btn{display:none}
-  .burger{display:grid}
-  .hero .wrap{grid-template-columns:1fr;gap:40px}
-  .quick-grid{grid-template-columns:1fr 1fr}
-  .about,.admit,.faq-grid,.band{grid-template-columns:1fr;gap:40px}
-  .programs{grid-template-columns:1fr 1fr}
-  .path{grid-template-columns:1fr 1fr;gap:40px 0}
-  .step:nth-child(2)::before{display:none}
-  .foot{grid-template-columns:1fr 1fr}
-}
-@media (max-width:640px){
-  body{font-size:16px}
-  .topbar nav{display:none}
-  .topbar .wrap{justify-content:flex-end}
-  .brand-name{font-size:13px}.brand-name small{font-size:12px}
-  .crest{width:44px;height:44px}
-  .quick-grid,.programs,.facts,.path,.foot{grid-template-columns:1fr}
-  .step::before{display:none}
-  .hero-actions .btn{width:100%}
-  .tabs{display:flex}.tabs button{flex:1;padding:0 10px}
-}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  [data-enter]>*{opacity:1;transform:none}
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<!--HEADER-->
 <a class="skip" href="#main">Перейти до змісту</a>
-
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></symbol>
   <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
   <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></symbol>
   <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5Z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
   <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
   <symbol id="i-cpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"/></symbol>
   <symbol id="i-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M2 9a15 15 0 0 1 20 0"/><circle cx="12" cy="19.5" r="1"/></symbol>
+  <symbol id="i-tower" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 10v12M8 22l4-12 4 12M7 6a7 7 0 0 0 0 8M17 6a7 7 0 0 1 0 8"/><circle cx="12" cy="9" r="1.5"/></symbol>
+  <symbol id="i-net" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-3h14v3"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
-  <symbol id="i-web" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></symbol>
-  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="s-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.2c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.3H8v3.3h2.6V22H14v-10.2h2.7l.4-3.3H14Z"/></symbol>
+  <symbol id="s-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="s-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M22.5 7.2a2.8 2.8 0 0 0-2-2C18.8 4.8 12 4.8 12 4.8s-6.8 0-8.5.4a2.8 2.8 0 0 0-2 2C1.1 8.9 1.1 12 1.1 12s0 3.1.4 4.8a2.8 2.8 0 0 0 2 2c1.7.4 8.5.4 8.5.4s6.8 0 8.5-.4a2.8 2.8 0 0 0 2-2c.4-1.7.4-4.8.4-4.8s0-3.1-.4-4.8ZM9.8 15.1V8.9l5.6 3.1-5.6 3.1Z"/></symbol>
+  <symbol id="s-tg" viewBox="0 0 24 24"><path fill="currentColor" d="M21.9 4.3 18.6 19.8c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.2-8.3c.4-.4-.1-.6-.6-.2L6 13.4 1.1 11.9c-1.1-.3-1.1-1.1.2-1.6L20.5 2.9c.9-.3 1.7.2 1.4 1.4Z"/></symbol>
+  <symbol id="s-tt" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 2h-3.4v13.6a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.4a6.3 6.3 0 1 0 5.4 6.2V8.7a8 8 0 0 0 4.6 1.5V6.8a4.6 4.6 0 0 1-4.6-4.8Z"/></symbol>
 </svg>
 
 <div class="topbar">
   <div class="wrap">
-    <nav aria-label="Швидкі посилання">
-      <a href="#admission">Абітурієнтам</a>
-      <a href="#programs">Студентам</a>
-      <a href="#faq">Батькам</a>
-      <a href="https://lpnu.ua">Львівська політехніка</a>
-    </nav>
-    <div class="lang" aria-label="Мова сайту">
-      <a href="#top" aria-current="true">УКР</a>
-      <a href="#top" lang="en">ENG</a>
+    <div class="group contact-links">
+      <a href="tel:+380322631566"><svg width="15" height="15"><use href="#i-phone"/></svg>(032) 263-15-66</a>
+      <a href="mailto:info@itcollege.lviv.ua"><svg width="15" height="15"><use href="#i-mail"/></svg>info@itcollege.lviv.ua</a>
+    </div>
+    <div class="social" aria-label="Соціальні мережі">
+      <a href="https://www.facebook.com/ITcollegeLviv/" aria-label="Facebook"><svg><use href="#s-fb"/></svg></a>
+      <a href="https://www.instagram.com/it_college_lviv/" aria-label="Instagram"><svg><use href="#s-ig"/></svg></a>
+      <a href="https://www.youtube.com/channel/UCKJxI8Y1eEqB3rs5oLxIL4Q" aria-label="YouTube"><svg><use href="#s-yt"/></svg></a>
+      <a href="https://t.me/itcollegelviv" aria-label="Telegram"><svg><use href="#s-tg"/></svg></a>
+      <a href="https://www.tiktok.com/@it_college_lviv" aria-label="TikTok"><svg><use href="#s-tt"/></svg></a>
     </div>
   </div>
 </div>
 
-<header class="header" id="hdr">
+<header class="header">
   <div class="wrap">
-    <a href="#top" class="brand" aria-label="Фаховий коледж інформаційних технологій — головна">
-      <svg class="crest" viewBox="0 0 52 52" aria-hidden="true">
-        <path d="M26 2 48 10v16c0 12-9.5 20.5-22 24C13.5 46.5 4 38 4 26V10Z" fill="#0b3a82"/>
-        <path d="M26 7 43 13.2V26c0 9.4-7.2 16.3-17 19.2C16.2 42.3 9 35.4 9 26V13.2Z" fill="none" stroke="#f2b705" stroke-width="1.5"/>
-        <text x="26" y="31" fill="#fff" font-family="Montserrat,Arial" font-weight="800" font-size="12" text-anchor="middle">КІТ</text>
-      </svg>
+    <a href="index.html" class="brand" aria-label="ІТ коледж Львівської політехніки — головна">
+      <img src="img/logo.jpg" alt="" width="56" height="56">
       <span class="brand-name">Фаховий коледж<br>інформаційних технологій<small>НУ «Львівська політехніка»</small></span>
     </a>
-    <nav class="menu" aria-label="Головне меню">
-      <a href="#about">Про коледж</a>
-      <a href="#programs">Спеціальності</a>
-      <a href="#admission">Вступ</a>
-      <a href="#faq">Питання</a>
-      <a href="#contacts">Контакти</a>
-    </nav>
-    <a href="#admission" class="btn btn-primary">Вступна кампанія</a>
-    <button class="burger" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mmenu"><span></span></button>
+    <ul class="menu" aria-label="Головне меню">
+      <li><button type="button" aria-expanded="false">Про коледж</button>
+        <ul class="drop">
+          <li><a href="https://itcollege.lviv.ua/nasha-istoriya/">Наша історія</a></li>
+          <li><a href="https://itcollege.lviv.ua/scientific-and-pedagogical-staff/">Адміністрація</a></li>
+          <li><a href="https://itcollege.lviv.ua/kolektyv-koledzhu/">Колектив коледжу</a></li>
+          <li><a href="https://itcollege.lviv.ua/tsyklovi-komisiyi/">Циклові комісії</a></li>
+          <li><a href="https://itcollege.lviv.ua/batkivska-rada/">Батьківська рада</a></li>
+          <li><a href="https://itcollege.lviv.ua/biblioteka-koledzhu/">Бібліотека коледжу</a></li>
+          <li><a href="https://itcollege.lviv.ua/sportivnyy-kompleks-koledzhu/">Спортивний комплекс</a></li>
+          <li><a href="https://itcollege.lviv.ua/hurtozhytok-mistsya/">Гуртожиток</a></li>
+          <li><a href="https://itcollege.lviv.ua/yidalnia-u-koledzhi/">Їдальня</a></li>
+          <li><a href="https://itcollege.lviv.ua/international-cooperation/">Міжнародна співпраця</a></li>
+          <li><a href="https://itcollege.lviv.ua/knyha-pamiati/">Книга пам'яті</a></li>
+        </ul></li>
+      <li><button type="button" aria-expanded="false">Вступнику</button>
+        <ul class="drop">
+          <li><a href="https://itcollege.lviv.ua/specialty/">Спеціальності та освітні програми</a></li>
+          <li><a href="https://itcollege.lviv.ua/pravyla-pryiomu-2026/">Правила прийому 2026</a></li>
+          <li><a href="https://itcollege.lviv.ua/stroky-pryiomu-dokumentiv-konkursno-2/">Строки вступу (9 клас)</a></li>
+          <li><a href="https://itcollege.lviv.ua/stroky-pryiomu-dokumentiv-konkursno/">Строки вступу (11 клас)</a></li>
+          <li><a href="https://itcollege.lviv.ua/rozklad-vstupnykh-vyprobuvan-u-2026-rotsi/">Розклад вступних випробувань</a></li>
+          <li><a href="https://itcollege.lviv.ua/prohramy-vstupnykh-vyprobuvan/">Програми вступних випробувань</a></li>
+          <li><a href="https://itcollege.lviv.ua/preparatory-courses-2026/">Підготовчі курси 2026</a></li>
+          <li><a href="https://itcollege.lviv.ua/rehulyarni-indyvidualni-ekskursiyi-u-koledzh-1/">Екскурсії у коледж</a></li>
+          <li><a href="https://itcollege.lviv.ua/podcasts/">Подкасти для абітурієнтів</a></li>
+        </ul></li>
+      <li><button type="button" aria-expanded="false">Студенту</button>
+        <ul class="drop">
+          <li><a href="https://itcollege.lviv.ua/rozklad-2-2025-2026/">Розклад занять</a></li>
+          <li><a href="https://itcollege.lviv.ua/dzvinku-2023-2024/">Розклад дзвінків</a></li>
+          <li><a href="https://itcollege.lviv.ua/reytynhovi-spysky-pershoho-kursu/">Рейтинги</a></li>
+          <li><a href="https://itcollege.lviv.ua/student-government-26-27/">Студентське самоврядування</a></li>
+          <li><a href="https://itcollege.lviv.ua/cisco-networking-academy/">Мережева Академія Cisco</a></li>
+          <li><a href="https://itcollege.lviv.ua/category/circle/">Гуртки</a></li>
+          <li><a href="https://itcollege.lviv.ua/kab-psuhologa/">Кабінет психолога</a></li>
+          <li><a href="https://itcollege.lviv.ua/rules-of-conduct-for-students/">Правила поведінки</a></li>
+          <li><a href="https://itcollege.lviv.ua/bulling/">Протидія булінгу</a></li>
+        </ul></li>
+      <li><button type="button" aria-expanded="false">Освітня діяльність</button>
+        <ul class="drop">
+          <li><a href="https://itcollege.lviv.ua/opp/">Освітньо-професійні програми</a></li>
+          <li><a href="https://itcollege.lviv.ua/np/">Навчальні плани</a></li>
+          <li><a href="https://itcollege.lviv.ua/syllabuses-curriculums/">Силабуси та навчальні програми</a></li>
+          <li><a href="https://itcollege.lviv.ua/lic-sert/">Ліцензії та сертифікати</a></li>
+          <li><a href="https://itcollege.lviv.ua/metodychnyy-kabinet/">Навчально-методичний кабінет</a></li>
+          <li><a href="https://itcollege.lviv.ua/normatyvno-pravova-baza/">Атестація педагогічних працівників</a></li>
+          <li><a href="https://itcollege.lviv.ua/category/vacancies/">Вакансії</a></li>
+        </ul></li>
+      <li><button type="button" aria-expanded="false">Публічність</button>
+        <ul class="drop">
+          <li><a href="https://itcollege.lviv.ua/position/">Положення коледжу</a></li>
+          <li><a href="https://itcollege.lviv.ua/stratehiya-rozvytku-2023-2028/">Стратегія розвитку 2023–2028</a></li>
+          <li><a href="https://itcollege.lviv.ua/shchorichnyy-zvit-kerivnyka/">Щорічний звіт керівника</a></li>
+          <li><a href="https://itcollege.lviv.ua/protocol/">Протоколи коледжу</a></li>
+          <li><a href="https://itcollege.lviv.ua/antykoruptsiyna-diyalnist/">Антикорупційна діяльність</a></li>
+          <li><a href="https://itcollege.lviv.ua/category/zakupivli/">Закупівлі</a></li>
+          <li><a href="https://itcollege.lviv.ua/indicators-of-material-and-technical/">Матеріально-технічне забезпечення</a></li>
+          <li><a href="https://registry.edbo.gov.ua/university/6520/entrant/">Публічна інформація (ЄДЕБО)</a></li>
+          <li><a href="https://itcollege.lviv.ua/trust-box/">Скринька та телефон довіри</a></li>
+        </ul></li>
+      <li><button type="button" aria-expanded="false">Випускнику</button>
+        <ul class="drop">
+          <li><a href="https://itcollege.lviv.ua/it-college-allumni/">Спільнота випускників</a></li>
+          <li><a href="https://itcollege.lviv.ua/karierni-mozhlivosti-ta-resursi/">Кар'єрні можливості</a></li>
+          <li><a href="https://itcollege.lviv.ua/intervyu-z-vypusknykamy/">Інтерв'ю з випускниками</a></li>
+          <li><a href="https://itcollege.lviv.ua/archivni-dovidky-dlya-vypusknykiv/">Архівні довідки</a></li>
+          <li><a href="https://itcollege.lviv.ua/pidtrimka-ta-blagodiinist/">Підтримка та благодійність</a></li>
+        </ul></li>
+      <li><a href="news.html">Новини</a></li>
+      <li><a href="index.html#contacts">Контакти</a></li>
+    </ul>
+    <a href="https://vstup.edbo.gov.ua/" class="btn btn-primary">Кабінет вступника</a>
+    <button class="burger" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mmenu"><span></span></button>
   </div>
 </header>
-<div class="mobile-menu" id="mmenu">
-  <a href="#about">Про коледж</a>
-  <a href="#programs">Спеціальності</a>
-  <a href="#admission">Вступ</a>
-  <a href="#faq">Питання</a>
-  <a href="#contacts">Контакти</a>
-  <a href="#admission" class="btn btn-primary">Вступна кампанія</a>
-</div>
+<nav class="mobile-menu" id="mmenu" aria-label="Мобільне меню">
+  <details><summary>Про коледж</summary>
+    <a href="https://itcollege.lviv.ua/nasha-istoriya/">Наша історія</a><a href="https://itcollege.lviv.ua/scientific-and-pedagogical-staff/">Адміністрація</a><a href="https://itcollege.lviv.ua/kolektyv-koledzhu/">Колектив коледжу</a><a href="https://itcollege.lviv.ua/biblioteka-koledzhu/">Бібліотека</a><a href="https://itcollege.lviv.ua/hurtozhytok-mistsya/">Гуртожиток</a><a href="https://itcollege.lviv.ua/international-cooperation/">Міжнародна співпраця</a></details>
+  <details><summary>Вступнику</summary>
+    <a href="https://itcollege.lviv.ua/specialty/">Спеціальності</a><a href="https://itcollege.lviv.ua/pravyla-pryiomu-2026/">Правила прийому 2026</a><a href="https://itcollege.lviv.ua/stroky-pryiomu-dokumentiv-konkursno-2/">Строки вступу (9 клас)</a><a href="https://itcollege.lviv.ua/stroky-pryiomu-dokumentiv-konkursno/">Строки вступу (11 клас)</a><a href="https://itcollege.lviv.ua/rozklad-vstupnykh-vyprobuvan-u-2026-rotsi/">Розклад вступних випробувань</a><a href="https://itcollege.lviv.ua/preparatory-courses-2026/">Підготовчі курси</a></details>
+  <details><summary>Студенту</summary>
+    <a href="https://itcollege.lviv.ua/rozklad-2-2025-2026/">Розклад занять</a><a href="https://itcollege.lviv.ua/dzvinku-2023-2024/">Розклад дзвінків</a><a href="https://itcollege.lviv.ua/reytynhovi-spysky-pershoho-kursu/">Рейтинги</a><a href="https://itcollege.lviv.ua/student-government-26-27/">Самоврядування</a><a href="https://itcollege.lviv.ua/cisco-networking-academy/">Академія Cisco</a></details>
+  <details><summary>Публічність</summary>
+    <a href="https://itcollege.lviv.ua/position/">Положення</a><a href="https://itcollege.lviv.ua/stratehiya-rozvytku-2023-2028/">Стратегія розвитку</a><a href="https://itcollege.lviv.ua/antykoruptsiyna-diyalnist/">Антикорупційна діяльність</a><a href="https://itcollege.lviv.ua/category/zakupivli/">Закупівлі</a></details>
+  <details><summary>Випускнику</summary>
+    <a href="https://itcollege.lviv.ua/it-college-allumni/">Спільнота випускників</a><a href="https://itcollege.lviv.ua/karierni-mozhlivosti-ta-resursi/">Кар'єрні можливості</a><a href="https://itcollege.lviv.ua/archivni-dovidky-dlya-vypusknykiv/">Архівні довідки</a></details>
+  <a href="news.html">Новини</a>
+  <a href="index.html#contacts">Контакти</a>
+  <a href="https://vstup.edbo.gov.ua/" class="btn btn-primary">Кабінет вступника</a>
+</nav>
+<!--/HEADER-->
 
 <main id="main">
-  <section class="hero" id="top" style="padding:0">
+  <section class="hero" style="padding:0">
+    <div class="hero-bg"><img src="img/teamviewer.jpg" alt="Студенти та викладачі коледжу біля стіни з логотипом" fetchpriority="high"></div>
     <div class="wrap">
-      <div data-enter>
-        <span class="kicker">Відокремлений структурний підрозділ</span>
-        <h1>Фаховий коледж інформаційних технологій Національного університету «Львівська політехніка»</h1>
-        <p>Державний заклад фахової передвищої освіти у Львові. Готуємо фахових молодших бакалаврів з комп'ютерних наук, комп'ютерної інженерії та телекомунікацій на основі 9 та 11 класів.</p>
+      <div class="hero-text" data-enter>
+        <span class="kicker">ВСП НУ «Львівська політехніка» · з 1945 року</span>
+        <h1>Фаховий коледж інформаційних технологій</h1>
+        <p>Готуємо фахових молодших бакалаврів з комп'ютерних наук, комп'ютерної інженерії, телекомунікацій, мереж та Інтернету речей. Вступ на основі 9 та 11 класів.</p>
         <div class="hero-actions">
-          <a href="#admission" class="btn btn-light">Умови вступу</a>
+          <a href="#admission" class="btn btn-light">Вступ 2026</a>
           <a href="#programs" class="btn btn-outline">Спеціальності</a>
         </div>
-      </div>
-      <div data-enter>
-        <div class="hero-card">
-          <h2>Навчання в коледжі</h2>
-          <p class="sub">Основні відомості для вступників</p>
-          <ul>
-            <li><span class="ico"><svg width="20" height="20"><use href="#i-cap"/></svg></span><div><b>Фаховий молодший бакалавр</b><span>Диплом державного зразка</span></div></li>
-            <li><span class="ico"><svg width="20" height="20"><use href="#i-book"/></svg></span><div><b>Денна форма навчання</b><span>На основі базової або повної середньої освіти</span></div></li>
-            <li><span class="ico"><svg width="20" height="20"><use href="#i-shield"/></svg></span><div><b>У складі Львівської політехніки</b><span>Продовження навчання на бакалавраті</span></div></li>
-          </ul>
+        <div class="badges">
+          <span class="badge"><b>ТОП-10</b> коледжів України за кількістю заяв</span>
+          <span class="badge"><b>№1</b> на Львівщині за заявами після 9 класу</span>
         </div>
       </div>
     </div>
@@ -320,27 +176,35 @@ footer ul a:hover{color:#fff}
 
   <div class="quick" aria-label="Швидкий доступ">
     <div class="wrap quick-grid">
-      <a href="#admission" class="q"><span class="ico"><svg width="22" height="22"><use href="#i-doc"/></svg></span><b>Вступникам</b><span>Порядок вступу та документи</span></a>
-      <a href="#programs" class="q"><span class="ico"><svg width="22" height="22"><use href="#i-cap"/></svg></span><b>Спеціальності</b><span>Освітні програми коледжу</span></a>
-      <a href="#path" class="q"><span class="ico"><svg width="22" height="22"><use href="#i-cal"/></svg></span><b>Освітній процес</b><span>Етапи навчання та практика</span></a>
-      <a href="#contacts" class="q"><span class="ico"><svg width="22" height="22"><use href="#i-pin"/></svg></span><b>Контакти</b><span>Приймальна комісія та адреса</span></a>
+      <a href="https://itcollege.lviv.ua/pravyla-pryiomu-2026/" class="q"><span class="ico"><svg width="22" height="22"><use href="#i-doc"/></svg></span><b>Правила прийому 2026</b><span>Умови вступу та конкурсний відбір</span></a>
+      <a href="https://itcollege.lviv.ua/rozklad-2-2025-2026/" class="q"><span class="ico"><svg width="22" height="22"><use href="#i-cal"/></svg></span><b>Розклад занять</b><span>Актуальний розклад для студентів</span></a>
+      <a href="https://itcollege.lviv.ua/preparatory-courses-2026/" class="q"><span class="ico"><svg width="22" height="22"><use href="#i-book"/></svg></span><b>Підготовчі курси</b><span>Реєстрація на курси 2026</span></a>
+      <a href="https://vstup.edbo.gov.ua/" class="q"><span class="ico"><svg width="22" height="22"><use href="#i-user"/></svg></span><b>Кабінет вступника</b><span>Електронна подача заяв</span></a>
     </div>
   </div>
 
   <section id="about">
-    <div class="wrap about">
-      <div>
-        <span class="kicker">Про коледж</span>
-        <h2>Фахова освіта в галузі інформаційних технологій</h2>
-        <p class="lead">Коледж є відокремленим структурним підрозділом Національного університету «Львівська політехніка» і поєднує шкільну підготовку з професійною.</p>
-        <p style="color:var(--muted)">Студенти опановують програмування, апаратне забезпечення, комп'ютерні мережі та телекомунікаційні системи. Навчання включає лабораторні роботи, курсові проєкти та виробничу практику, а випускники можуть продовжити здобуття освіти в університеті.</p>
-        <p style="margin-top:22px"><a href="https://lpnu.ua" class="link">Про Львівську політехніку →</a></p>
+    <div class="wrap">
+      <div class="about">
+        <div class="about-text">
+          <span class="kicker">Про коледж</span>
+          <h2>Від технікуму зв'язку до ІТ коледжу Політехніки</h2>
+          <p class="lead">27 травня 1945 року було організовано Львівський електротехнікум зв'язку — так розпочалася історія нашого закладу.</p>
+          <p class="muted">Перший набір складав 111 студентів, які навчалися міжміського телефонного зв'язку та радіофікації. Сьогодні коледж є відокремленим структурним підрозділом Національного університету «Львівська політехніка» і готує фахівців з програмування, комп'ютерної інженерії, телекомунікацій та мережних технологій.</p>
+          <p class="muted">Навчальний корпус і лабораторії розташовані на вулиці Володимира Великого. Студенти навчаються у 14 спеціалізованих лабораторіях і майстернях, а також у Мережевій академії Cisco.</p>
+          <p style="margin-top:22px"><a href="https://itcollege.lviv.ua/nasha-istoriya/" class="link">Наша історія →</a></p>
+        </div>
+        <div class="about-media">
+          <div class="photo"><img src="img/diplomas.jpg" alt="Випускники коледжу з дипломами" loading="lazy"></div>
+          <div class="photo"><img src="img/defense.jpg" alt="Захист дипломних проєктів" loading="lazy"></div>
+          <div class="photo"><img src="img/sept1.jpg" alt="Урочистості в актовій залі коледжу" loading="lazy"></div>
+        </div>
       </div>
       <div class="facts">
-        <div class="fact dark"><div class="n">3</div><p>спеціальності в галузі ІТ та зв'язку</p></div>
-        <div class="fact"><div class="n">9 / 11</div><p>класів — дві основи вступу</p></div>
-        <div class="fact"><div class="n">ФМБ</div><p>освітньо-професійний ступінь фахового молодшого бакалавра</p></div>
-        <div class="fact"><div class="n">НУ ЛП</div><p>структурний підрозділ Львівської політехніки</p></div>
+        <div class="fact dark"><div class="n">1945</div><p>рік заснування закладу</p></div>
+        <div class="fact"><div class="n">5</div><p>освітньо-професійних програм у галузі ІТ та зв'язку</p></div>
+        <div class="fact"><div class="n">4 / 3</div><p>роки навчання після 9 / 11 класу</p></div>
+        <div class="fact"><div class="n">100</div><p>комп'ютерів і ноутбуків від TeamViewer у 2026 році</p></div>
       </div>
     </div>
   </section>
@@ -352,156 +216,194 @@ footer ul a:hover{color:#fff}
           <span class="kicker">Освітні програми</span>
           <h2>Спеціальності коледжу</h2>
         </div>
-        <p class="lead">Підготовка за трьома спеціальностями. Коди наведено за переліком спеціальностей 2025 року та попереднім переліком.</p>
+        <p class="lead">Освітньо-професійний ступінь фахового молодшого бакалавра, денна форма навчання.</p>
       </div>
       <div class="programs">
-        <a href="#admission" class="prog">
+        <a href="https://vstup.edbo.gov.ua/offer/5lWvxTgdXO5o7GbqdSqPFtBT0y07VCpsBTtSndSQbGyKOKw" class="prog wide">
           <div class="prog-top"><span class="ico"><svg width="28" height="28"><use href="#i-code"/></svg></span><span class="code">F3 · 122</span></div>
           <div class="prog-body">
             <h3>Комп'ютерні науки</h3>
-            <p>Розробка програмного забезпечення, вебтехнології та бази даних.</p>
-            <ul><li>Алгоритмізація та програмування</li><li>Вебпрограмування</li><li>Бази даних та SQL</li></ul>
-            <div class="meta"><span>Денна форма</span><span class="link">Детальніше →</span></div>
+            <p>Розробка математичного, інформаційного та програмного забезпечення, адміністрування баз даних і систем.</p>
+            <ul><li>Алгоритмізація та об'єктно-орієнтоване програмування</li><li>WEB-технології та WEB-дизайн</li><li>Організація баз даних та знань, тестування ПЗ</li></ul>
+            <div class="meta"><span>9 кл. — 4 роки · 11 кл. — 3 роки</span><span class="link">Пропозиція →</span></div>
           </div>
         </a>
-        <a href="#admission" class="prog">
+        <a href="https://vstup.edbo.gov.ua/offer/e_4TjWcZvo0d82eUSTMVCfCVkCjIJZIbawmldS23X1I2iwA" class="prog wide">
           <div class="prog-top"><span class="ico"><svg width="28" height="28"><use href="#i-cpu"/></svg></span><span class="code">F7 · 123</span></div>
           <div class="prog-body">
             <h3>Комп'ютерна інженерія</h3>
-            <p>Апаратне забезпечення, мікропроцесорні системи та адміністрування.</p>
-            <ul><li>Схемотехніка</li><li>Мікроконтролери</li><li>Операційні системи</li></ul>
-            <div class="meta"><span>Денна форма</span><span class="link">Детальніше →</span></div>
+            <p>Апаратне забезпечення, комп'ютерні системи та їх обслуговування.</p>
+            <ul><li>Комп'ютерна електроніка та архітектура комп'ютерів</li><li>Периферійні пристрої</li><li>Мікроконтролери</li></ul>
+            <div class="meta"><span>9 кл. — 4 роки · 11 кл. — 3 роки</span><span class="link">Пропозиція →</span></div>
           </div>
         </a>
-        <a href="#admission" class="prog">
-          <div class="prog-top"><span class="ico"><svg width="28" height="28"><use href="#i-wifi"/></svg></span><span class="code">G5 · 172</span></div>
+        <a href="https://vstup.edbo.gov.ua/offer/9LbGGbxJoCp2Vi348Pw77M-s4Jcb32-l1X3YRICbM86kf1o" class="prog">
+          <div class="prog-top"><span class="ico"><svg width="28" height="28"><use href="#i-tower"/></svg></span><span class="code">G5 · 172</span></div>
           <div class="prog-body">
             <h3>Телекомунікації та комп'ютерні технології</h3>
-            <p>Комп'ютерні мережі, системи зв'язку та Інтернет речей.</p>
-            <ul><li>Комп'ютерні мережі</li><li>Телекомунікаційні системи</li><li>Інтернет речей</li></ul>
-            <div class="meta"><span>Денна форма</span><span class="link">Детальніше →</span></div>
+            <p>Системи та мережі зв'язку, телекомунікаційне обладнання.</p>
+            <div class="meta"><span>Галузь G5</span><span class="link">Пропозиція →</span></div>
+          </div>
+        </a>
+        <a href="https://vstup.edbo.gov.ua/offer/wSdljSqtKuxneqNhUKqDf35eAVq7vxJqaLUfsW_jjMZQZNM" class="prog">
+          <div class="prog-top"><span class="ico"><svg width="28" height="28"><use href="#i-wifi"/></svg></span><span class="code">G5 · 172</span></div>
+          <div class="prog-body">
+            <h3>Інжиніринг та програмування в інфокомунікаціях</h3>
+            <p>Програмування інфокомунікаційних систем і сервісів.</p>
+            <div class="meta"><span>Галузь G5</span><span class="link">Пропозиція →</span></div>
+          </div>
+        </a>
+        <a href="https://vstup.edbo.gov.ua/offer/bx3fwkMl512b4nJV6RU958o7wjp369g3hQ9PNFkE9e9WCEU" class="prog">
+          <div class="prog-top"><span class="ico"><svg width="28" height="28"><use href="#i-net"/></svg></span><span class="code">G5 · 172</span></div>
+          <div class="prog-body">
+            <h3>Мережні технології та Інтернет речей</h3>
+            <p>Комп'ютерні мережі, IoT-пристрої та їх налаштування.</p>
+            <div class="meta"><span>Галузь G5</span><span class="link">Пропозиція →</span></div>
           </div>
         </a>
       </div>
+      <p class="center"><a href="https://itcollege.lviv.ua/specialty/" class="btn btn-ghost">Детально про освітні програми</a></p>
     </div>
   </section>
 
-  <section id="path">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <span class="kicker">Освітній процес</span>
-          <h2>Етапи навчання</h2>
-        </div>
-        <p class="lead">Після 9 класу перший курс поєднує загальноосвітню підготовку з основами фаху. Після 11 класу навчання починається з профільних дисциплін.</p>
-      </div>
-      <div class="path">
-        <div class="step"><span class="dot">1</span><h3>Загальна підготовка</h3><p>Математика, фізика, інформатика та основи програмування.</p></div>
-        <div class="step"><span class="dot">2</span><h3>Професійні дисципліни</h3><p>Профільні предмети спеціальності, лабораторні та курсові роботи.</p></div>
-        <div class="step"><span class="dot">3</span><h3>Практична підготовка</h3><p>Виробнича практика та виконання прикладних проєктів.</p></div>
-        <div class="step"><span class="dot">4</span><h3>Атестація</h3><p>Диплом фахового молодшого бакалавра та можливість вступу до університету.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="admission" class="bg-soft">
+  <section id="admission">
     <div class="wrap admit">
       <div>
-        <span class="kicker">Вступна кампанія</span>
-        <h2>Порядок вступу до коледжу</h2>
-        <p class="lead">Оберіть основу вступу, щоб переглянути основні етапи.</p>
-        <div class="notice">Строки вступної кампанії, перелік документів і конкурсні пропозиції затверджуються Правилами прийому на відповідний рік та оприлюднюються приймальною комісією.</div>
-        <div class="hero-actions" style="margin-top:28px">
-          <a href="https://itcollege.lviv.ua" class="btn btn-primary">Приймальна комісія</a>
-          <a href="https://vstup.osvita.ua" class="btn btn-ghost">Конкурсні пропозиції</a>
+        <span class="kicker">Вступна кампанія 2026</span>
+        <h2>Вступ до коледжу</h2>
+        <p class="lead">Оберіть основу вступу — тут зібрані інструкції, строки та документи приймальної комісії.</p>
+        <div class="notice">Питання щодо вступу: <a href="mailto:admission@itcollege.lviv.ua" class="link" style="color:#2e5d0e">admission@itcollege.lviv.ua</a>. Діють регулярні індивідуальні екскурсії в коледж для абітурієнтів і батьків.</div>
+        <div class="hero-actions" style="margin-top:26px">
+          <a href="https://vstup.edbo.gov.ua/" class="btn btn-primary">Зареєструватися</a>
+          <a href="https://itcollege.lviv.ua/rehulyarni-indyvidualni-ekskursiyi-u-koledzh-1/" class="btn btn-ghost">Записатися на екскурсію</a>
         </div>
       </div>
       <div>
         <div class="tabs" role="tablist" aria-label="Основа вступу">
-          <button role="tab" id="t9" aria-selected="true" aria-controls="p9">На основі 9 класів</button>
-          <button role="tab" id="t11" aria-selected="false" aria-controls="p11" tabindex="-1">На основі 11 класів</button>
+          <button role="tab" type="button" id="t9" aria-selected="true" aria-controls="p9">На основі 9 класів</button>
+          <button role="tab" type="button" id="t11" aria-selected="false" aria-controls="p11" tabindex="-1">На основі 11 класів</button>
         </div>
         <div class="alist" id="p9" role="tabpanel" aria-labelledby="t9">
-          <div class="a"><span class="n">1</span><div><h3>Вибір спеціальності</h3><p>Ознайомтеся з освітніми програмами та конкурсними пропозиціями.</p></div></div>
-          <div class="a"><span class="n">2</span><div><h3>Реєстрація електронного кабінету</h3><p>Заява на вступ подається в електронній формі.</p></div></div>
-          <div class="a"><span class="n">3</span><div><h3>Вступні випробування</h3><p>Форма та строки визначаються Правилами прийому.</p></div></div>
-          <div class="a"><span class="n">4</span><div><h3>Подання оригіналів і зарахування</h3><p>Після рекомендації до зарахування подайте оригінали документів.</p></div></div>
+          <a class="a" href="https://www.youtube.com/watch?v=NwE6TUckg4c"><span class="n">1</span><div><h3>Відеоінструкція для вступників</h3><p>Покроково: як вступити на базі 9 класів</p></div><span class="go" aria-hidden="true">→</span></a>
+          <a class="a" href="https://itcollege.lviv.ua/stroky-pryiomu-dokumentiv-konkursno-2/"><span class="n">2</span><div><h3>Строки прийому документів</h3><p>Конкурсний відбір і зарахування у 2026 році</p></div><span class="go" aria-hidden="true">→</span></a>
+          <a class="a" href="https://itcollege.lviv.ua/rozklad-vstupnykh-vyprobuvan-u-2026-rotsi/"><span class="n">3</span><div><h3>Розклад вступних випробувань</h3><p>Дати та час випробувань у 2026 році</p></div><span class="go" aria-hidden="true">→</span></a>
+          <a class="a" href="https://itcollege.lviv.ua/prohramy-vstupnykh-vyprobuvan/"><span class="n">4</span><div><h3>Програми вступних випробувань</h3><p>Що потрібно знати для підготовки</p></div><span class="go" aria-hidden="true">→</span></a>
         </div>
         <div class="alist" id="p11" role="tabpanel" aria-labelledby="t11" hidden>
-          <div class="a"><span class="n">1</span><div><h3>Вибір спеціальності</h3><p>Ті самі спеціальності, навчання з профільних дисциплін.</p></div></div>
-          <div class="a"><span class="n">2</span><div><h3>Результати НМТ</h3><p>Для вступу враховуються результати національного мультипредметного тесту.</p></div></div>
-          <div class="a"><span class="n">3</span><div><h3>Подання заяви</h3><p>Через електронний кабінет вступника у встановлені строки.</p></div></div>
-          <div class="a"><span class="n">4</span><div><h3>Зарахування</h3><p>Подання оригіналів документів після рекомендації.</p></div></div>
+          <a class="a" href="https://www.facebook.com/share/p/1DwyeraDaa/"><span class="n">1</span><div><h3>Інструкція для вступників</h3><p>Покроково: як вступити на базі 11 класів</p></div><span class="go" aria-hidden="true">→</span></a>
+          <a class="a" href="https://itcollege.lviv.ua/stroky-pryiomu-dokumentiv-konkursno/"><span class="n">2</span><div><h3>Строки прийому документів</h3><p>Для вступників на основі повної загальної середньої освіти</p></div><span class="go" aria-hidden="true">→</span></a>
+          <a class="a" href="https://vstup.edbo.gov.ua/"><span class="n">3</span><div><h3>Електронний кабінет вступника</h3><p>Реєстрація та подання заяв онлайн</p></div><span class="go" aria-hidden="true">→</span></a>
+          <a class="a" href="https://itcollege.lviv.ua/pravyla-pryiomu-2026/"><span class="n">4</span><div><h3>Правила прийому 2026</h3><p>Офіційні умови вступу до коледжу</p></div><span class="go" aria-hidden="true">→</span></a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="faq">
-    <div class="wrap faq-grid">
-      <div>
-        <span class="kicker">Довідка</span>
-        <h2>Поширені запитання</h2>
-        <p class="lead">Відповіді на питання, які найчастіше ставлять вступники та батьки.</p>
+  <section id="news" class="bg-soft">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="kicker">Життя коледжу</span>
+          <h2>Останні новини</h2>
+        </div>
+        <a href="news.html" class="btn btn-primary">Усі новини (<span id="news-total">1667</span>)</a>
       </div>
-      <div>
-        <details><summary>Чи потрібна попередня підготовка з програмування? <span class="pm" aria-hidden="true">+</span></summary><p>Ні. Навчання починається з основ, а необхідні знання студенти здобувають на заняттях і в лабораторіях.</p></details>
-        <details><summary>Який документ про освіту отримують випускники? <span class="pm" aria-hidden="true">+</span></summary><p>Диплом фахового молодшого бакалавра державного зразка за обраною спеціальністю.</p></details>
-        <details><summary>Чи можна продовжити навчання в університеті? <span class="pm" aria-hidden="true">+</span></summary><p>Так. Коледж входить до складу Національного університету «Львівська політехніка», і випускники можуть вступити на бакалаврат зі скороченим терміном навчання.</p></details>
-        <details><summary>Чим відрізняються спеціальності? <span class="pm" aria-hidden="true">+</span></summary><p>Комп'ютерні науки зосереджені на програмному забезпеченні, комп'ютерна інженерія — на апаратній частині та системах, телекомунікації — на мережах і зв'язку.</p></details>
+      <div class="news-grid" id="latest"></div>
+    </div>
+  </section>
+
+  <section id="labs">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="kicker">Матеріальна база</span>
+          <h2>Лабораторії та майстерні</h2>
+        </div>
+        <p class="lead">Практичні заняття проходять у спеціалізованих лабораторіях, оснащених сучасним обладнанням.</p>
+      </div>
+      <div class="labs">
+        <a href="https://itcollege.lviv.ua/%d0%bb%d0%b0%d0%b1%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%96%d1%8f-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d1%83%d0%b2%d0%b0%d0%bd%d0%bd%d1%8f/">Лабораторія програмування</a>
+        <a href="https://itcollege.lviv.ua/%d0%bb%d0%b0%d0%b1%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%96%d1%8f-%d0%ba%d0%be%d0%bc%d0%bf%d1%8e%d1%82%d0%b5%d1%80%d0%bd%d0%b8%d1%85-%d0%bc%d0%b5%d1%80%d0%b5%d0%b6/">Лабораторія комп'ютерних мереж</a>
+        <a href="https://itcollege.lviv.ua/%d1%86%d0%b5%d0%bd%d1%82%d1%80-%d1%96%d0%bd%d1%82%d0%b5%d1%80%d0%b0%d0%ba%d1%82%d0%b8%d0%b2%d0%bd%d0%b8%d1%85-%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d1%96%d0%b9/">Лабораторія інтерактивних технологій</a>
+        <a href="https://itcollege.lviv.ua/%d0%bb%d0%b0%d0%b1%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%96%d1%8f-%d0%bc%d1%96%d0%ba%d1%80%d0%be%d0%bf%d1%80%d0%be%d1%86%d0%b5%d1%81%d0%be%d1%80%d0%bd%d0%be%d1%97-%d1%82%d0%b5%d1%85%d0%bd%d1%96%d0%ba/">Мікропроцесорна техніка та мікроконтролери</a>
+        <a href="https://itcollege.lviv.ua/%d0%bb%d0%b0%d0%b1%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%96%d1%8f-%d0%bf%d0%b5%d1%80%d0%b8%d1%84%d0%b5%d1%80%d1%96%d0%b9%d0%bd%d0%b8%d1%85-%d0%bf%d1%80%d0%b8%d1%81%d1%82%d1%80%d0%be%d1%97%d0%b2/">Периферійні пристрої</a>
+        <a href="https://itcollege.lviv.ua/%d0%bb%d0%b0%d0%b1%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%96%d1%8f-%d0%b0%d0%bf%d0%b0%d1%80%d0%b0%d1%82%d0%bd%d0%b8%d1%85-%d0%b7%d0%b0%d1%81%d0%be%d0%b1%d1%96%d0%b2-%d1%96%d0%bd%d1%84%d0%be%d1%80/">Апаратні засоби інформатизації</a>
+        <a href="https://itcollege.lviv.ua/%d0%bb%d0%b0%d0%b1%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%96%d1%8f-%d1%82%d0%b5%d0%bb%d0%b5%d0%ba%d0%be%d0%bc%d1%83%d0%bd%d1%96%d0%ba%d0%b0%d1%86%d1%96%d0%b9%d0%bd%d0%b8%d1%85-%d0%bc%d0%b5%d1%80%d0%b5/">Телекомунікаційні мережі</a>
+        <a href="https://itcollege.lviv.ua/%d0%bb%d0%b0%d0%b1%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%96%d1%8f-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d0%bf%d0%bb%d0%b5%d0%ba%d1%81%d0%bd%d0%b8%d1%85-%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3/">Мультиплексні технології</a>
+        <a href="https://itcollege.lviv.ua/%d0%bb%d0%b0%d0%b1%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%96%d1%8f-%d1%96%d0%bd%d1%84%d0%be%d1%80%d0%bc%d0%b0%d1%86%d1%96%d0%b9%d0%bd%d0%b8%d1%85-%d1%81%d0%b8%d1%81%d1%82%d0%b5%d0%bc-%d1%96-%d0%bc/">Інформаційні системи і мережі</a>
+        <a href="https://itcollege.lviv.ua/%d0%bb%d0%b0%d0%b1%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%96%d1%8f-%d1%81%d0%b8%d1%81%d1%82%d0%b5%d0%bc-%d1%82%d0%b0-%d0%bc%d0%b5%d1%80%d0%b5%d0%b6-%d0%b7%d0%b2%d1%8f%d0%b7%d0%ba%d1%83-%d0%b7/">Системи та мережі зв'язку з рухомими об'єктами</a>
+        <a href="https://itcollege.lviv.ua/laboratoriya-orgtekhniki/">Засоби оргтехніки та інформаційної діяльності</a>
+        <a href="https://itcollege.lviv.ua/%d0%bc%d0%b0%d0%b9%d1%81%d1%82%d0%b5%d1%80%d0%bd%d1%8f-%d0%ba%d0%be%d0%bc%d0%bf%d1%8e%d1%82%d0%b5%d1%80%d0%bd%d0%be%d1%97-%d1%82%d0%b5%d1%85%d0%bd%d1%96%d0%ba%d0%b8/">Майстерня комп'ютерної техніки</a>
+        <a href="https://itcollege.lviv.ua/%d0%bd%d0%b0%d0%b2%d1%87%d0%b0%d0%bb%d1%8c%d0%bd%d0%be-%d0%b2%d0%b8%d1%80%d0%be%d0%b1%d0%bd%d0%b8%d1%87%d0%b0-%d0%bc%d0%b0%d0%b9%d1%81%d1%82%d0%b5%d1%80%d0%bd%d1%8f-%d1%80%d0%b5%d0%bc%d0%be%d0%bd/">Ремонт цифрових пристроїв</a>
+        <a href="https://itcollege.lviv.ua/%d0%bd%d0%b0%d0%b2%d1%87%d0%b0%d0%bb%d1%8c%d0%bd%d0%be-%d0%b2%d0%b8%d1%80%d0%be%d0%b1%d0%bd%d0%b8%d1%87%d0%b0-%d0%bc%d0%b0%d0%b9%d1%81%d1%82%d0%b5%d1%80%d0%bd%d1%8f-%d1%80%d0%b5%d0%bc%d0%be%d0%bd-2/">Ремонт радіоелектронних пристроїв</a>
+        <a href="https://itcollege.lviv.ua/cisco-networking-academy/">Мережева Академія Cisco</a>
       </div>
     </div>
   </section>
 
   <section id="contacts" style="padding-top:0">
-    <div class="wrap">
+    <div class="wrap contacts">
       <div class="band">
-        <div style="position:relative;z-index:1">
-          <span class="kicker">Контакти</span>
-          <h2>Приймальна комісія</h2>
-          <p>Актуальні телефони, електронна пошта та графік роботи приймальної комісії розміщені на офіційному сайті коледжу.</p>
-          <div class="hero-actions"><a href="https://itcollege.lviv.ua" class="btn btn-light">Офіційний сайт коледжу</a></div>
-        </div>
-        <ul class="band-list">
-          <li><span class="ico"><svg width="20" height="20"><use href="#i-pin"/></svg></span><span>вул. Володимира Великого, Львів</span></li>
-          <li><span class="ico"><svg width="20" height="20"><use href="#i-web"/></svg></span><span>itcollege.lviv.ua</span></li>
-          <li><span class="ico"><svg width="20" height="20"><use href="#i-shield"/></svg></span><span>НУ «Львівська політехніка»</span></li>
+        <span class="kicker">Контакти</span>
+        <h2>Як з нами зв'язатися</h2>
+        <ul class="clist">
+          <li><span class="ico"><svg width="20" height="20"><use href="#i-pin"/></svg></span><span><small>Адреса</small>79053, м. Львів, вул. Володимира Великого, 12</span></li>
+          <li><span class="ico"><svg width="20" height="20"><use href="#i-phone"/></svg></span><span><small>Телефон / факс</small><a href="tel:+380322631566">(032) 263-15-66</a> · факс (032) 234-06-52</span></li>
+          <li><span class="ico"><svg width="20" height="20"><use href="#i-mail"/></svg></span><span><small>Загальна пошта</small><a href="mailto:info@itcollege.lviv.ua">info@itcollege.lviv.ua</a></span></li>
+          <li><span class="ico"><svg width="20" height="20"><use href="#i-cap"/></svg></span><span><small>Питання вступу</small><a href="mailto:admission@itcollege.lviv.ua">admission@itcollege.lviv.ua</a></span></li>
+          <li><span class="ico"><svg width="20" height="20"><use href="#i-user"/></svg></span><span><small>Комунікація та співпраця</small><a href="mailto:com@itcollege.lviv.ua">com@itcollege.lviv.ua</a></span></li>
         </ul>
+      </div>
+      <div class="map">
+        <iframe title="Карта: вул. Володимира Великого, 12, Львів" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%D0%9B%D1%8C%D0%B2%D1%96%D0%B2,+%D0%B2%D1%83%D0%BB.+%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%B0+%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D0%B3%D0%BE,+12&output=embed"></iframe>
       </div>
     </div>
   </section>
 </main>
 
+<!--FOOTER-->
 <footer>
   <div class="wrap">
     <div class="foot">
       <div>
-        <a href="#top" class="brand">
-          <svg class="crest" viewBox="0 0 52 52" aria-hidden="true"><path d="M26 2 48 10v16c0 12-9.5 20.5-22 24C13.5 46.5 4 38 4 26V10Z" fill="#fff"/><text x="26" y="31" fill="#0b3a82" font-family="Montserrat,Arial" font-weight="800" font-size="12" text-anchor="middle">КІТ</text></svg>
-          <span class="brand-name">Фаховий коледж<br>інформаційних технологій<small>НУ «Львівська політехніка»</small></span>
-        </a>
+        <a href="index.html" class="brand"><img src="img/logo.jpg" alt="" width="56" height="56"><span class="brand-name">Фаховий коледж<br>інформаційних технологій<small>НУ «Львівська політехніка»</small></span></a>
+        <p style="margin-top:18px;max-width:340px">Відокремлений структурний підрозділ «Фаховий коледж інформаційних технологій Національного університету «Львівська політехніка».</p>
+        <div class="social" style="margin-top:18px">
+          <a href="https://www.facebook.com/ITcollegeLviv/" aria-label="Facebook"><svg><use href="#s-fb"/></svg></a>
+          <a href="https://www.instagram.com/it_college_lviv/" aria-label="Instagram"><svg><use href="#s-ig"/></svg></a>
+          <a href="https://www.youtube.com/channel/UCKJxI8Y1eEqB3rs5oLxIL4Q" aria-label="YouTube"><svg><use href="#s-yt"/></svg></a>
+          <a href="https://t.me/itcollegelviv" aria-label="Telegram"><svg><use href="#s-tg"/></svg></a>
+          <a href="https://www.tiktok.com/@it_college_lviv" aria-label="TikTok"><svg><use href="#s-tt"/></svg></a>
+        </div>
       </div>
-      <div><h4>Коледж</h4><ul><li><a href="#about">Про коледж</a></li><li><a href="#programs">Спеціальності</a></li><li><a href="#path">Освітній процес</a></li></ul></div>
-      <div><h4>Вступникам</h4><ul><li><a href="#admission">Порядок вступу</a></li><li><a href="#faq">Запитання</a></li><li><a href="https://vstup.osvita.ua">Конкурсні пропозиції</a></li></ul></div>
-      <div><h4>Корисні ресурси</h4><ul><li><a href="https://lpnu.ua">Львівська політехніка</a></li><li><a href="https://mon.gov.ua">МОН України</a></li><li><a href="https://itcollege.lviv.ua">itcollege.lviv.ua</a></li></ul></div>
+      <div><h4>Вступнику</h4><ul>
+        <li><a href="https://itcollege.lviv.ua/specialty/">Спеціальності</a></li>
+        <li><a href="https://itcollege.lviv.ua/pravyla-pryiomu-2026/">Правила прийому 2026</a></li>
+        <li><a href="https://itcollege.lviv.ua/preparatory-courses-2026/">Підготовчі курси</a></li>
+        <li><a href="https://itcollege.lviv.ua/reytynhovi-spysky-pershoho-kursu/">Рейтингові списки</a></li>
+        <li><a href="https://vstup.edbo.gov.ua/">Кабінет вступника</a></li>
+      </ul></div>
+      <div><h4>Новини</h4><ul>
+        <li><a href="news.html">Усі новини</a></li>
+        <li><a href="news.html?cat=%D0%9E%D0%B3%D0%BE%D0%BB%D0%BE%D1%88%D0%B5%D0%BD%D0%BD%D1%8F">Оголошення</a></li>
+        <li><a href="news.html?cat=%D0%A3%D1%81%D0%BF%D1%96%D1%85%D0%B8+%D1%81%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%96%D0%B2">Успіхи студентів</a></li>
+        <li><a href="news.html?cat=%D0%A1%D0%BF%D0%BE%D1%80%D1%82">Спорт</a></li>
+        <li><a href="https://itcollege.lviv.ua/category/photo/">Фотогалерея</a></li>
+      </ul></div>
+      <div><h4>Контакти</h4><ul>
+        <li>вул. Володимира Великого, 12, Львів</li>
+        <li><a href="tel:+380322631566">(032) 263-15-66</a></li>
+        <li><a href="mailto:info@itcollege.lviv.ua">info@itcollege.lviv.ua</a></li>
+        <li><a href="https://itcollege.lviv.ua/map-site/">Мапа сайту</a></li>
+      </ul>
+      <div class="partner"><img src="img/nulp-logo.png" alt="Логотип НУ «Львівська політехніка»" width="48" height="48"><a href="https://lpnu.ua">Львівська політехніка</a></div>
+      </div>
     </div>
-    <div class="foot-bottom"><span>© 2026 ВСП «Фаховий коледж інформаційних технологій НУ «Львівська політехніка»</span><span>Концепт редизайну</span></div>
+    <div class="foot-bottom"><span>© 1945–2026 ВСП «Фаховий коледж інформаційних технологій НУ «Львівська політехніка»</span><span>Концепт редизайну itcollege.lviv.ua</span></div>
   </div>
 </footer>
-
-<script>
-(()=>{
-const hdr=document.getElementById('hdr');
-const on=()=>hdr.classList.toggle('scrolled',scrollY>10);addEventListener('scroll',on,{passive:true});on();
-const b=document.querySelector('.burger'),m=document.getElementById('mmenu');
-const set=o=>{b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Закрити меню':'Відкрити меню');m.classList.toggle('open',o);document.body.style.overflow=o?'hidden':''};
-b.addEventListener('click',()=>set(b.getAttribute('aria-expanded')!=='true'));
-m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>set(false)));
-addEventListener('keydown',e=>{if(e.key==='Escape')set(false)});
-const tabs=[...document.querySelectorAll('[role=tab]')];
-const sel=t=>tabs.forEach(x=>{const s=x===t;x.setAttribute('aria-selected',s);x.tabIndex=s?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!s});
-tabs.forEach((t,i)=>{t.addEventListener('click',()=>sel(t));t.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=tabs[(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];sel(n);n.focus()}})});
-})();
-</script>
+<!--/FOOTER-->
+<script src="data/news.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
